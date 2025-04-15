@@ -24,7 +24,15 @@ function HomePage() {
         {title: "CROP PROTECTION", herf: "cropProtection"},
         {title: "CROP NUTRITION", herf: "cropNutrition"},
         {title: "ANIMAL HUSBANDARY", herf: "animalHusbandary"},
-    ]  
+    ];  
+    const Categories = [
+        {title:"Offer", img: offer},
+        {title:"Offer", img: offer},
+        {title:"Offer", img: offer},
+        {title:"Offer", img: offer},
+        {title:"Offer", img: offer},
+        {title:"Offer", img: offer},
+    ]
     
     return (
      <div> 
@@ -64,7 +72,7 @@ function HomePage() {
                 <ul className="navbar-nav mb-2 mb-lg-0 text-center d-lg-none d-block">
                     {menuItems.map(({title, herf}) => (
                         <li className="nav-item">
-                        <a href={`# ${herf}`} className="nav-link">{title}</a>
+                        <a href={`#${herf}`} className="nav-link">{title}</a>
                     </li>
                     ))}
                 </ul>
@@ -95,40 +103,14 @@ function HomePage() {
            <p className="fs-4 text-center">Categories</p>
          </div>
          <div className="container my-4 row row-cols-3 row-cols-lg-6 g-2 g-lg-4 mx-auto">
-
-            <a href="#" className="text-decoration-none text-dark text-center col">
-              <img src={offer} alt="offer" className="img-fluid border rounded-circle p-2 bg-light"/>
-              <p className="h5">Offers</p>
-            </a>
-            <a href="#" className="text-decoration-none text-dark text-center col">
-              <img src={offer} alt="offer" className="img-fluid border rounded-circle p-2 bg-light"/>
-              <p className="h5">Offers</p>
-            </a>
-            <a href="#" className="text-decoration-none text-dark text-center col">
-              <img src={offer} alt="offer" className="img-fluid border rounded-circle p-2 bg-light"/>
-              <p className="h5">Offers</p>
-            </a>
-            <a href="#" className="text-decoration-none text-dark text-center col">
-              <img src={offer} alt="offer" className="img-fluid border rounded-circle p-2 bg-light"/>
-              <p className="h5">Offers</p>
-            </a>
-            <a href="#" className="text-decoration-none text-dark text-center col">
-              <img src={offer} alt="offer" className="img-fluid border rounded-circle p-2 bg-light"/>
-              <p className="h5">Offers</p>
-            </a>
-            <a href="#" className="text-decoration-none text-dark text-center col">
-              <img src={offer} alt="offer" className="img-fluid border rounded-circle p-2 bg-light"/>
-              <p className="h5">Offers</p>
-            </a>
-            <a href="#" className="text-decoration-none text-dark text-center col">
-              <img src={offer} alt="offer" className="img-fluid border rounded-circle p-2 bg-light"/>
-              <p className="h5">Offers</p>
-            </a>
-            <a href="#" className="text-decoration-none text-dark text-center col">
-              <img src={offer} alt="offer" className="img-fluid border rounded-circle p-2 bg-light"/>
-              <p className="h5">Offers</p>
-            </a>
-
+           {Categories.map(({title, img}) => (
+             <a href="#" className="text-decoration-none text-dark text-center col">
+             <img src={img} alt={title} className="img-fluid border rounded-circle p-2 bg-light"/>
+             <p className="h5">{title}</p>
+           </a>
+           ))}
+            
+           
          </div>
       </div>
      
